@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unique Auto Repairs Ltd | Mechanic & Car Servicing, Christchurch</title>
+<meta name="description" content="Honest car servicing, WOF inspections and repairs in Christchurch. All makes and models, clear quotes before we start. Call Unique Auto Repairs Ltd.">
+<meta property="og:title" content="Unique Auto Repairs Ltd | Mechanic & Car Servicing, Christchurch">
+<meta property="og:description" content="Honest car servicing, WOF inspections and repairs in Christchurch. All makes and models, clear quotes before we start.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1200&q=80">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%23131417'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23F2611B' font-family='Arial Black,Arial' font-weight='900'%3EU%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131417; --ink-2:#1c1e23; --bone:#f4f1ec; --light:#ffffff;
+  --accent:#f2611b; --accent-dark:#d44e10; --muted:#8a8f98; --line:#2a2d34;
+  --radius:4px; --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;color:#23262c;background:var(--light);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Staatliches',sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.02}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'Hanken Grotesk';font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:'Hanken Grotesk';font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;padding:15px 26px;border-radius:var(--radius);transition:.2s;cursor:pointer;border:2px solid transparent}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-2px)}
+
+/* INTRO */
+#intro{position:fixed;inset:0;z-index:9999;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;transition:opacity .7s ease,visibility .7s}
+#intro.done{opacity:0;visibility:hidden}
+#intro .mark{font-family:'Staatliches';font-size:clamp(2.6rem,8vw,5rem);color:#fff;letter-spacing:2px}
+#intro .mark b{color:var(--accent)}
+#intro .bar{width:140px;height:3px;background:var(--line);overflow:hidden;border-radius:3px}
+#intro .bar i{display:block;height:100%;width:40%;background:var(--accent);animation:load 1.2s ease forwards}
+@keyframes load{from{transform:translateX(-120%)}to{transform:translateX(280%)}}
+
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:900;transition:.3s}
+header .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+header.scrolled{background:var(--ink);box-shadow:0 6px 30px rgba(0,0,0,.3)}
+.brand{display:flex;align-items:center;gap:11px;color:#fff;font-family:'Staatliches';font-size:1.5rem;letter-spacing:1px}
+.brand .dot{width:34px;height:34px;background:var(--accent);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.25rem}
+nav.links{display:flex;align-items:center;gap:30px}
+nav.links a{color:rgba(255,255,255,.82);font-weight:600;font-size:.92rem;transition:.2s}
+nav.links a:hover{color:var(--accent)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{color:#fff;font-weight:800;font-size:.95rem;display:flex;align-items:center;gap:7px}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0;padding:6px}
+.burger span{width:26px;height:3px;background:#fff;border-radius:2px}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;background:var(--ink);display:flex;align-items:flex-end;overflow:hidden}
+.hero .slides{position:absolute;inset:0}
+.hero .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease;filter:saturate(.85) contrast(1.05)}
+.hero .slide.active{opacity:1}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,20,23,.55) 0%,rgba(19,20,23,.5) 40%,rgba(19,20,23,.9) 100%)}
+.hero .content{position:relative;z-index:3;padding:140px 0 70px;width:100%}
+.hero .eyebrow{color:var(--accent);margin-bottom:18px}
+.hero h1{color:#fff;font-size:clamp(2.8rem,7vw,5.6rem);max-width:16ch;text-transform:uppercase}
+.hero h1 span{color:var(--accent)}
+.hero p.lead{color:rgba(255,255,255,.86);font-size:clamp(1.05rem,2vw,1.3rem);max-width:48ch;margin:22px 0 30px;font-weight:500}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px}
+.scroll-tag{position:absolute;right:28px;bottom:28px;z-index:3;color:rgba(255,255,255,.5);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;writing-mode:vertical-rl}
+
+/* TRUST */
+.trust{background:var(--ink-2);border-top:1px solid var(--line)}
+.trust .grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.trust .item{display:flex;gap:16px;align-items:flex-start;padding:34px 24px;border-right:1px solid var(--line)}
+.trust .item:last-child{border-right:0}
+.trust .ic{flex:0 0 auto;width:46px;height:46px;border:2px solid var(--accent);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.trust h4{font-family:'Staatliches';color:#fff;font-size:1.3rem;letter-spacing:.5px}
+.trust p{color:var(--muted);font-size:.92rem;margin-top:2px}
+
+/* SECTION */
+section.band{padding:96px 0}
+.band.light{background:var(--light)}
+.band.bone{background:var(--bone)}
+.sec-head{max-width:640px;margin-bottom:54px}
+.sec-head h2{font-size:clamp(2.2rem,5vw,3.4rem);text-transform:uppercase;margin-top:12px;color:var(--ink)}
+.sec-head p{color:#5a5f68;font-size:1.05rem;margin-top:14px}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:var(--light);border:1px solid #e7e3db;border-radius:var(--radius);padding:30px;transition:.25s;position:relative;overflow:hidden}
+.bone .svc{background:#fff}
+.svc:before{content:"";position:absolute;left:0;top:0;height:100%;width:4px;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:.25s}
+.svc:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(19,20,23,.12)}
+.svc:hover:before{transform:scaleY(1)}
+.svc .ic{width:48px;height:48px;color:var(--accent);margin-bottom:18px}
+.svc h3{font-size:1.5rem;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.svc p{color:#5a5f68;font-size:.95rem}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about .media{position:relative}
+.about .media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);filter:saturate(.85) contrast(1.05)}
+.about .tag{position:absolute;left:-14px;bottom:24px;background:var(--accent);color:#fff;font-family:'Staatliches';font-size:1.15rem;letter-spacing:1px;padding:12px 22px;border-radius:var(--radius)}
+.about h2{font-size:clamp(2.2rem,5vw,3.2rem);text-transform:uppercase;color:var(--ink);margin:12px 0 18px}
+.about p{color:#4b505a;margin-bottom:14px}
+.checklist{list-style:none;margin-top:22px;display:grid;gap:14px}
+.checklist li{display:flex;gap:13px;align-items:flex-start;font-weight:600;color:var(--ink)}
+.checklist .ck{flex:0 0 auto;width:26px;height:26px;background:var(--accent);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#fff}
+
+/* CREW */
+.crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.crew{background:var(--ink);border-radius:var(--radius);padding:34px 28px;text-align:center;border:1px solid var(--line)}
+.crew .av{width:84px;height:84px;border-radius:50%;background:var(--ink-2);border:3px solid var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Staatliches';font-size:1.9rem;color:#fff;letter-spacing:1px}
+.crew h3{color:#fff;font-size:1.45rem;text-transform:uppercase}
+.crew .role-sub{color:var(--accent);font-weight:800;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin:3px 0 12px}
+.crew p{color:var(--muted);font-size:.92rem}
+.badge{display:inline-block;background:rgba(242,97,27,.12);color:var(--accent);font-weight:800;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 13px;border-radius:var(--radius);margin-bottom:16px}
+
+/* REVIEWS */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev{background:#fff;border:1px solid #e7e3db;border-radius:var(--radius);padding:28px}
+.rev .stars{color:var(--accent);letter-spacing:2px;margin-bottom:12px;font-size:1.05rem}
+.rev p{color:#3c414b;font-style:italic;margin-bottom:18px}
+.rev .who{display:flex;align-items:center;gap:12px}
+.rev .who .c{width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Staatliches';font-size:1.1rem}
+.rev .who b{display:block;color:var(--ink);font-size:.95rem}
+.rev .who span{color:var(--muted);font-size:.82rem}
+
+/* REVIEW FUNNEL BANNER */
+.funnel{background:var(--ink);position:relative;overflow:hidden}
+.funnel:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(242,97,27,.22),transparent 55%)}
+.funnel .inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;padding:64px 0}
+.funnel h2{color:#fff;font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase;max-width:18ch}
+.funnel .stars{color:var(--accent);font-size:1.6rem;letter-spacing:4px;margin-bottom:10px}
+.funnel p{color:rgba(255,255,255,.7);margin-top:6px}
+
+/* CONTACT */
+.contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px}
+.contact-info h2{color:#fff;font-size:clamp(2.2rem,5vw,3.2rem);text-transform:uppercase;margin:12px 0 16px}
+.contact-info>p{color:var(--muted);margin-bottom:30px;max-width:42ch}
+.cinfo{display:grid;gap:18px}
+.cinfo a,.cinfo div{display:flex;gap:15px;align-items:center;color:#e7e9ec}
+.cinfo .ic{width:44px;height:44px;border:2px solid var(--line);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--accent);flex:0 0 auto}
+.cinfo b{display:block;color:#fff;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.cinfo span{font-weight:700;font-size:1.05rem}
+.form{background:#fff;border-radius:var(--radius);padding:34px}
+.form h3{font-size:1.6rem;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+.form p.sub{color:#5a5f68;font-size:.9rem;margin-bottom:20px}
+.field{margin-bottom:15px}
+.field label{display:block;font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:#3c414b;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1.5px solid #d9d5cd;border-radius:var(--radius);font-family:inherit;font-size:.95rem;background:#fbfaf8;transition:.2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--accent);background:#fff}
+.field textarea{resize:vertical;min-height:110px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.form .btn-primary{width:100%;justify-content:center;margin-top:6px}
+
+/* FOOTER */
+footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:38px;border-bottom:1px solid var(--line)}
+.foot-grid .brand{margin-bottom:16px}
+.foot-grid p{color:var(--muted);font-size:.92rem;max-width:34ch}
+.foot-col h5{font-family:'Staatliches';font-size:1.2rem;letter-spacing:.5px;margin-bottom:16px;color:#fff}
+.foot-col a{display:block;color:var(--muted);font-size:.92rem;margin-bottom:11px;transition:.2s}
+.foot-col a:hover{color:var(--accent)}
+.foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;color:var(--muted);font-size:.84rem}
+.foot-bot a{color:var(--muted)}.foot-bot a:hover{color:var(--accent)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:880px){
+  nav.links{display:none}
+  .nav-phone{display:none}
+  .burger{display:flex}
+  .trust .grid{grid-template-columns:1fr}
+  .trust .item{border-right:0;border-bottom:1px solid var(--line)}
+  .svc-grid,.crew-grid,.rev-grid{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;gap:34px}
+  .contact-wrap{grid-template-columns:1fr;gap:34px}
+  .foot-grid{grid-template-columns:1fr;gap:28px}
+  .row2{grid-template-columns:1fr}
+  nav.mobile{position:fixed;inset:0;top:0;background:var(--ink);z-index:899;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transform:translateY(-100%);transition:.35s;opacity:0}
+  nav.mobile.open{transform:none;opacity:1}
+  nav.mobile a{color:#fff;font-family:'Staatliches';font-size:2rem}
+}
+@media(prefers-reduced-motion:reduce){.hero .slide{transition:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div id="intro"><div class="mark">UNIQUE <b>AUTO</b></div><div class="bar"><i></i></div></div>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a href="index.html" class="brand"><span class="dot">U</span> Unique Auto Repairs</a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#crew">Team</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+6433899476" class="nav-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        03 389 9476
+      </a>
+      <a href="#contact" class="btn btn-primary">Get a Quote</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile" id="mnav">
+  <a href="#services">Services</a><a href="#about">About</a><a href="#crew">Team</a>
+  <a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+  <a href="tel:+6433899476" class="btn btn-primary">Call 03 389 9476</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="slides" id="slides">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1900&q=80')"></div>
+    <div class="slide" data-bg="https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&w=1900&q=80"></div>
+    <div class="slide" data-bg="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1900&q=80"></div>
+  </div>
+  <div class="scrim"></div>
+  <div class="wrap content">
+    <p class="eyebrow">Christchurch · Auto Repairs &amp; Servicing</p>
+    <h1>Honest car repairs <span>that get you back on the road.</span></h1>
+    <p class="lead">Servicing, WOFs and mechanical repairs for all makes and models — done properly, with a clear quote before any work starts.</p>
+    <div class="actions">
+      <a href="#contact" class="btn btn-primary">Book a Service</a>
+      <a href="tel:+6433899476" class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        03 389 9476
+      </a>
+    </div>
+  </div>
+  <span class="scroll-tag">Scroll</span>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="wrap"><div class="grid">
+    <div class="item">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div><h4>Christchurch Local</h4><p>A workshop your neighbours already trust, right here in town.</p></div>
+    </div>
+    <div class="item">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="2" y="9" width="20" height="12" rx="2"/></svg></div>
+      <div><h4>No Surprise Bills</h4><p>We quote the job upfront and ring you before anything extra.</p></div>
+    </div>
+    <div class="item">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <div><h4>All Makes &amp; Models</h4><p>Euro, Japanese or Aussie — petrol, diesel and hybrid covered.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- SERVICES -->
+<section class="band light" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Workshop services for everyday driving</h2>
+      <p>From a quick WOF to a clutch rebuild, we keep Christchurch cars running safely and reliably. Here's where most jobs start.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <h3>WOF Inspections</h3>
+        <p>Warrant of Fitness checks while you wait, with a plain-English rundown of anything that needs sorting.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <h3>Servicing &amp; Logbook</h3>
+        <p>Scheduled and logbook servicing that keeps your warranty intact and your car running its best.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="3"/></svg>
+        <h3>Brakes &amp; Suspension</h3>
+        <p>Pads, discs, shocks and struts — the bits that keep you stopping straight and riding smooth.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <h3>Engine Diagnostics</h3>
+        <p>Check-engine light on? We plug in, read the fault codes and tell you what's really going on.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3>Clutch &amp; Transmission</h3>
+        <p>Slipping clutch or rough gear changes? We diagnose and repair manual and auto drivelines.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h4l2-7 4 14 2-7h4"/></svg>
+        <h3>Tyres, Batteries &amp; A/C</h3>
+        <p>New tyres, flat batteries and air-con regas to keep you comfortable through the Canterbury seasons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="band bone" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="media reveal">
+        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1100&q=80" alt="Mechanic working under the bonnet of a car in the workshop" loading="lazy" width="1100" height="825">
+        <span class="tag">In the workshop</span>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">About Us</span>
+        <h2>A straight-up local workshop</h2>
+        <p>Unique Auto Repairs is a Christchurch workshop built on doing the job right and telling you straight. We treat every car like it's our own — whether it's a quick warrant or a job that needs a proper look.</p>
+        <p>No upselling, no jargon, no surprise invoices. Just sound mechanical work from people who'll explain exactly what your car needs and why.</p>
+        <ul class="checklist">
+          <li><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Locally owned and operated in Christchurch</li>
+          <li><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>A clear quote before any work begins</li>
+          <li><span class="ck"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Workmanship you can rely on</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREW -->
+<section class="band light" id="crew">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:34px">
+      <span class="badge">The Team</span>
+      <h2>The people under the bonnet</h2>
+      <p>A small, hands-on crew — you'll deal with the same faces every visit. Support roles shown are examples of how the workshop runs.</p>
+    </div>
+    <div class="crew-grid">
+      <div class="crew reveal">
+        <div class="av">V</div>
+        <h3>Vim</h3>
+        <div class="role-sub">Owner / Lead Mechanic</div>
+        <p>Runs the workshop and the spanner. The one who'll talk you through your car and stand behind the work.</p>
+      </div>
+      <div class="crew reveal">
+        <div class="av">QT</div>
+        <h3>Qualified Technician</h3>
+        <div class="role-sub">Servicing &amp; Repairs</div>
+        <p>Handles the day-to-day servicing, WOFs and repairs so your car is turned around without the wait.</p>
+      </div>
+      <div class="crew reveal">
+        <div class="av">SA</div>
+        <h3>Service Advisor</h3>
+        <div class="role-sub">Bookings &amp; Quotes</div>
+        <p>Your first point of contact — books you in, keeps you updated and makes sure the quote is clear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="band bone" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="badge">Example Reviews</span>
+      <h2>What Christchurch drivers say</h2>
+      <p>A taste of the kind of feedback a workshop like this earns. Sample reviews shown for the demo.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Took my Corolla in for a WOF and a noise I'd been ignoring. They found it, quoted before fixing, and the price was fair. Won't go anywhere else now."</p>
+        <div class="who"><span class="c">JM</span><div><b>Jared M.</b><span>Riccarton</span></div></div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Honest blokes. My old Hilux needed a clutch and they talked me through every option instead of just charging me for the biggest job. Sorted same week."</p>
+        <div class="who"><span class="c">TW</span><div><b>Tania W.</b><span>Hornby</span></div></div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Check-engine light had me worried. They plugged in, explained it in plain English and it turned out to be a cheap fix. Genuinely good service."</p>
+        <div class="who"><span class="c">RP</span><div><b>Reuben P.</b><span>Papanui</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNNEL BANNER -->
+<section class="funnel">
+  <div class="wrap inner">
+    <div>
+      <div class="stars">★★★★★</div>
+      <h2>Happy with our work? Leave us a review.</h2>
+      <p>It takes 30 seconds and helps other Christchurch drivers find an honest workshop.</p>
+    </div>
+    <a href="review.html" class="btn btn-primary">Leave a Review</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band" id="contact" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Book your car in</h2>
+        <p>Need a WOF, a service or a repair quote? Give us a call or send a message and we'll get you sorted.</p>
+        <div class="cinfo">
+          <a href="tel:+6433899476">
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span><b>Phone</b>03 389 9476</span>
+          </a>
+          <a href="mailto:uniqueauto7@gmail.com">
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <span><b>Email</b>uniqueauto7@gmail.com</span>
+          </a>
+          <div>
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><b>Location</b>Christchurch, Canterbury</span>
+          </div>
+        </div>
+      </div>
+      <div class="form reveal">
+        <h3>Request a Quote</h3>
+        <p class="sub">Tell us about your car and what it needs — we'll get back to you fast.</p>
+        <form action="https://formsubmit.co/uniqueauto7@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New quote request — Unique Auto Repairs website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://unique-auto-repairs-ltd-demo.vercel.app/index.html">
+          <div class="row2">
+            <div class="field"><label>Name</label><input type="text" name="Name" placeholder="Your name" required></div>
+            <div class="field"><label>Phone</label><input type="tel" name="Phone" placeholder="Your number" required></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label>Email</label><input type="email" name="Email" placeholder="you@email.com"></div>
+            <div class="field"><label>Vehicle Make / Model</label><input type="text" name="Vehicle" placeholder="e.g. 2014 Toyota Corolla"></div>
+          </div>
+          <div class="field">
+            <label>What do you need?</label>
+            <select name="Service">
+              <option>WOF inspection</option>
+              <option>Service / logbook</option>
+              <option>Brakes or suspension</option>
+              <option>Engine diagnostics</option>
+              <option>Clutch / transmission</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field"><label>Tell us about the job</label><textarea name="Details" placeholder="Any noises, warning lights, or what you'd like done..."></textarea></div>
+          <button type="submit" class="btn btn-primary">Send Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="dot">U</span> Unique Auto Repairs</a>
+        <p>Honest car servicing, WOFs and mechanical repairs for all makes and models in Christchurch.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Explore</h5>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#crew">Team</a>
+        <a href="#reviews">Reviews</a>
+        <a href="review.html">Leave a Review</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="tel:+6433899476">03 389 9476</a>
+        <a href="mailto:uniqueauto7@gmail.com">uniqueauto7@gmail.com</a>
+        <a href="#contact">Christchurch, Canterbury</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> Unique Auto Repairs Ltd · Christchurch</span>
+      <span><a href="terms.html">Terms &amp; Conditions</a> · <a href="privacy.html">Privacy Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// intro
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('intro').classList.add('done'),1100)});
+// nav scroll
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',scrollY>40)});
+// mobile menu
+const burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
+burger.addEventListener('click',()=>mnav.classList.toggle('open'));
+mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mnav.classList.remove('open')));
+// hero rotation
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const slides=[...document.querySelectorAll('.hero .slide')];
+slides.forEach(s=>{if(s.dataset.bg){const i=new Image();i.src=s.dataset.bg;i.onload=()=>s.style.backgroundImage=`url('${s.dataset.bg}')`;}});
+if(!reduce&&slides.length>1){let i=0;setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active');},6000);}
+// reveal
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// year
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

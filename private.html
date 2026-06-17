@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Feedback | Unique Auto Repairs Ltd</title>
+<meta name="description" content="Share private feedback with Unique Auto Repairs Ltd, Christchurch.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%23131417'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23F2611B' font-family='Arial Black,Arial' font-weight='900'%3EU%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#131417;--accent:#f2611b;--accent-dark:#d44e10;--muted:#8a8f98;--line:#2a2d34;--radius:4px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--ink);color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Staatliches';font-size:1.4rem;letter-spacing:1px;margin-bottom:30px}
+.brand .dot{width:32px;height:32px;background:var(--accent);border-radius:var(--radius);display:flex;align-items:center;justify-content:center}
+.card{background:#fff;color:#23262c;border-radius:6px;max-width:540px;width:100%;padding:38px;animation:up .5s ease}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;margin-bottom:10px}
+h1{font-family:'Staatliches';font-weight:400;font-size:2.1rem;text-transform:uppercase;line-height:1.05;color:var(--ink);margin-bottom:8px}
+p.sub{color:#5a5f68;font-size:.96rem;margin-bottom:24px}
+.rate{display:flex;gap:6px;margin-bottom:22px;font-size:1.6rem;color:#d9d5cd}
+.rate .on{color:var(--accent)}
+.field{margin-bottom:15px}
+label{display:block;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:#3c414b;margin-bottom:6px}
+input,textarea{width:100%;padding:13px 14px;border:1.5px solid #d9d5cd;border-radius:var(--radius);font-family:inherit;font-size:.95rem;background:#fbfaf8;transition:.2s}
+input:focus,textarea:focus{outline:0;border-color:var(--accent);background:#fff}
+textarea{resize:vertical;min-height:120px}
+button.send{width:100%;background:var(--accent);color:#fff;border:0;padding:15px;border-radius:var(--radius);font-family:'Hanken Grotesk';font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;cursor:pointer;transition:.2s;margin-top:6px}
+button.send:hover{background:var(--accent-dark)}
+.back{margin-top:18px;text-align:center}
+.back a{color:#8a8f98;font-weight:700;font-size:.85rem;text-decoration:none}
+.back a:hover{color:var(--accent)}
+.success{display:none;text-align:center;padding:10px 0}
+.success.show{display:block;animation:up .4s ease}
+.success .tick{width:72px;height:72px;border-radius:50%;background:rgba(242,97,27,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.success h1{margin-bottom:10px}
+.success p{color:#5a5f68;margin-bottom:24px}
+</style>
+</head>
+<body>
+<div class="brand"><span class="dot">U</span> Unique Auto Repairs</div>
+<div class="card">
+  <div id="formView">
+    <p class="eyebrow">Private Feedback</p>
+    <h1>Help us put it right</h1>
+    <p class="sub">Thanks for being honest. This goes straight to the team at Unique Auto Repairs — not public — so we can fix it.</p>
+    <div class="rate" id="rateStars">★★★★★</div>
+    <form id="fbForm" action="https://formsubmit.co/uniqueauto7@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Private feedback — Unique Auto Repairs website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="Rating" id="ratingField" value="">
+      <div class="field"><label>Name</label><input type="text" name="Name" placeholder="Your name" required></div>
+      <div class="field"><label>Email</label><input type="email" name="Email" placeholder="you@email.com" required></div>
+      <div class="field"><label>What could we have done better?</label><textarea name="Feedback" placeholder="Tell us what happened and how we can make it right..." required></textarea></div>
+      <button type="submit" class="send">Send Feedback</button>
+    </form>
+    <div class="back"><a href="index.html">← Back to website</a></div>
+  </div>
+  <div class="success" id="successView">
+    <div class="tick"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#f2611b" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+    <h1>Thank you</h1>
+    <p>We've received your feedback and someone from the team will be in touch. We appreciate you giving us the chance to make it right.</p>
+    <div class="back"><a href="index.html">← Back to website</a></div>
+  </div>
+</div>
+<script>
+// pre-fill rating from URL
+var r=parseInt(new URLSearchParams(location.search).get('rating'),10);
+if(!r||r<1||r>5)r=3;
+document.getElementById('ratingField').value=r+" star"+(r>1?"s":"");
+var st=document.getElementById('rateStars'),html="";
+for(var i=1;i<=5;i++)html+='<span class="'+(i<=r?'on':'')+'">★</span>';
+st.innerHTML=html;
+// ajax submit -> success state (no redirect, no recaptcha)
+var form=document.getElementById('fbForm');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var data=new FormData(form);
+  fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    .then(function(){show()}).catch(function(){show()});
+});
+function show(){document.getElementById('formView').style.display='none';document.getElementById('successView').classList.add('show');}
+</script>
+</body>
+</html>
