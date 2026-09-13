@@ -8,7 +8,7 @@
 <meta property="og:title" content="Unique Auto Repairs Ltd | Mechanic & Car Servicing, Christchurch">
 <meta property="og:description" content="Honest car servicing, WOF inspections and repairs in Christchurch. All makes and models, clear quotes before we start.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:image" content="https://unique-auto-repairs-ltd-demo.vercel.app/images/hero-workshop.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%23131417'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23F2611B' font-family='Arial Black,Arial' font-weight='900'%3EU%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,22 +103,13 @@ section.band{padding:96px 0}
 /* ABOUT */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .about .media{position:relative}
-.about .media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);filter:saturate(.85) contrast(1.05)}
+.about .media img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);filter:saturate(.85) contrast(1.05)}
 .about .tag{position:absolute;left:-14px;bottom:24px;background:var(--accent);color:#fff;font-family:'Staatliches';font-size:1.15rem;letter-spacing:1px;padding:12px 22px;border-radius:var(--radius)}
 .about h2{font-size:clamp(2.2rem,5vw,3.2rem);text-transform:uppercase;color:var(--ink);margin:12px 0 18px}
 .about p{color:#4b505a;margin-bottom:14px}
 .checklist{list-style:none;margin-top:22px;display:grid;gap:14px}
 .checklist li{display:flex;gap:13px;align-items:flex-start;font-weight:600;color:var(--ink)}
 .checklist .ck{flex:0 0 auto;width:26px;height:26px;background:var(--accent);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#fff}
-
-/* CREW */
-.crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.crew{background:var(--ink);border-radius:var(--radius);padding:34px 28px;text-align:center;border:1px solid var(--line)}
-.crew .av{width:84px;height:84px;border-radius:50%;background:var(--ink-2);border:3px solid var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Staatliches';font-size:1.9rem;color:#fff;letter-spacing:1px}
-.crew h3{color:#fff;font-size:1.45rem;text-transform:uppercase}
-.crew .role-sub{color:var(--accent);font-weight:800;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin:3px 0 12px}
-.crew p{color:var(--muted);font-size:.92rem}
-.badge{display:inline-block;background:rgba(242,97,27,.12);color:var(--accent);font-weight:800;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 13px;border-radius:var(--radius);margin-bottom:16px}
 
 /* REVIEWS */
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -130,7 +121,7 @@ section.band{padding:96px 0}
 .rev .who b{display:block;color:var(--ink);font-size:.95rem}
 .rev .who span{color:var(--muted);font-size:.82rem}
 
-/* REVIEW FUNNEL BANNER */
+/* REVIEW INVITATION */
 .funnel{background:var(--ink);position:relative;overflow:hidden}
 .funnel:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(242,97,27,.22),transparent 55%)}
 .funnel .inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;padding:64px 0}
@@ -147,17 +138,6 @@ section.band{padding:96px 0}
 .cinfo .ic{width:44px;height:44px;border:2px solid var(--line);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--accent);flex:0 0 auto}
 .cinfo b{display:block;color:#fff;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .cinfo span{font-weight:700;font-size:1.05rem}
-.form{background:#fff;border-radius:var(--radius);padding:34px}
-.form h3{font-size:1.6rem;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
-.form p.sub{color:#5a5f68;font-size:.9rem;margin-bottom:20px}
-.field{margin-bottom:15px}
-.field label{display:block;font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:#3c414b;margin-bottom:6px}
-.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1.5px solid #d9d5cd;border-radius:var(--radius);font-family:inherit;font-size:.95rem;background:#fbfaf8;transition:.2s}
-.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--accent);background:#fff}
-.field textarea{resize:vertical;min-height:110px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.form .btn-primary{width:100%;justify-content:center;margin-top:6px}
-
 /* FOOTER */
 footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:38px;border-bottom:1px solid var(--line)}
@@ -189,9 +169,18 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
   nav.mobile a{color:#fff;font-family:'Staatliches';font-size:2rem}
 }
 @media(prefers-reduced-motion:reduce){.hero .slide{transition:none}.reveal{opacity:1;transform:none}}
-</style>
+
+/* Build prompt refresh */
+:focus-visible{outline:3px solid #f2611b;outline-offset:5px}section[id]{scroll-margin-top:90px}.skip-link{position:fixed;top:8px;left:8px;z-index:1000;background:white;padding:12px;transform:translateY(-160%)}.skip-link:focus{transform:none}
+header .bar{padding:16px 24px}.hero .content{padding:145px 24px 75px}.hero .slide{width:100%;height:100%;object-fit:cover}.hero h1{max-width:18ch}.hero .lead{max-width:48ch}.hero-rating{display:flex;align-items:center;gap:10px;width:fit-content;max-width:100%;margin-top:25px;padding:13px 16px;background:rgba(255,255,255,.1);border:1px solid #ffffff40;border-radius:7px;backdrop-filter:blur(14px);color:#fff;font-size:.95rem}.hero-rating svg,.star-row{color:#f8a66d}.hero-rating strong{font-weight:800}.hero-review{display:inline-flex;align-items:center;min-height:44px;gap:18px;color:#fff;text-decoration:underline;text-underline-offset:5px;margin-top:5px;font-weight:600}.slide-toggle{position:absolute;right:24px;bottom:25px;z-index:4;min-height:44px;padding:8px 12px;border:1px solid #ffffff60;color:#fff;background:#131417a0;border-radius:4px;cursor:pointer}.scroll-tag{display:none}.btn:active{transform:translateY(1px)}nav.mobile{display:none}
+.svc{padding:0 0 28px}.service-photo{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;margin-bottom:24px}.svc h3,.svc p{margin-left:25px;margin-right:25px}.svc p{font-size:1rem}.svc:before{display:none}.gallery-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:20px}.gallery-grid img{width:100%;height:280px;object-fit:cover;border-radius:4px}.gallery-grid figcaption{font-size:.9rem;color:#62656b;margin-top:12px}.star-row{display:flex;gap:3px;margin-bottom:20px}.rev{display:flex;flex-direction:column}.rev p{font-size:1.12rem;flex:1}.text-link{display:inline-flex;align-items:center;min-height:44px;font-weight:700;text-decoration:underline;text-underline-offset:5px;margin-top:24px}.contact-actions{align-self:center;padding:34px;background:#1c1e23;border:1px solid #34363c;border-radius:6px;color:#fff}.contact-actions h3{font-size:2.2rem;margin:14px 0}.contact-actions p{color:#bfc2c8;margin-bottom:24px}.contact-actions>.btn{display:flex;justify-content:center;text-align:center;margin-top:12px}.social-link{display:flex;align-items:center;gap:10px;min-height:44px;width:fit-content;color:inherit;margin-top:22px;font-size:.95rem}.social-note{opacity:.7}.map-section{background:var(--bone);padding:65px 0 75px}.map-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:25px}.map-heading h2{font-size:3rem;margin-top:12px}.map-section iframe{width:100%;height:380px;border:0;border-radius:6px}.foot-col a,.foot-bot a{min-height:44px;display:inline-flex;align-items:center}.foot-col a{display:flex;margin-bottom:0}.foot-bot{align-items:center}.cinfo>div{align-items:flex-start}.cinfo span{overflow-wrap:anywhere}
+@media(max-width:1100px){nav.links{gap:17px}.nav-phone{display:none}}
+@media(max-width:880px){header{background:var(--ink)}header .bar{gap:12px;padding:13px 20px}.brand{font-size:1.18rem;gap:8px}.brand .dot{width:28px;height:30px;flex-shrink:0}.nav-cta .btn{display:none}.nav-phone{display:flex;font-size:0;width:44px;height:44px;justify-content:center;background:var(--accent);border-radius:4px}.nav-phone svg{width:20px;height:20px}.burger{min-width:44px;min-height:44px;align-items:center;justify-content:center}.nav-cta{margin-left:auto}nav.mobile{display:flex;visibility:hidden}nav.mobile.open{visibility:visible}.hero{min-height:720px;min-height:100svh}.hero .content{padding:115px 24px 80px}.hero h1{font-size:clamp(2.9rem,8vw,4.7rem)}.hero p.lead{margin:18px 0 24px;font-size:1.05rem}.hero .actions{gap:10px}.hero .actions .btn{padding:13px 16px;min-height:48px}.hero-rating{font-size:.875rem;padding:12px;gap:8px}.hero-rating svg{flex-shrink:0}.slide-toggle{font-size:.72rem;bottom:14px}section.band{padding:65px 0}.sec-head{margin-bottom:32px}.gallery-grid{grid-template-columns:1fr}.gallery-grid img{height:auto;aspect-ratio:16/10}.map-heading{align-items:flex-start;flex-direction:column;gap:0}.map-section iframe{height:320px}.contact-actions{padding:25px}.funnel .inner{padding:46px 24px}.hero .eyebrow{font-size:.65rem;letter-spacing:.15em}.hero h1{letter-spacing:0}.trust .item{padding:25px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#intro{display:none}}
+</style><noscript><style>#intro{display:none}.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div id="intro"><div class="mark">UNIQUE <b>AUTO</b></div><div class="bar"><i></i></div></div>
 
@@ -201,7 +190,7 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
     <nav class="links">
       <a href="#services">Services</a>
       <a href="#about">About</a>
-      <a href="#crew">Team</a>
+      <a href="#gallery">Gallery</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -212,26 +201,26 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
       </a>
       <a href="#contact" class="btn btn-primary">Get a Quote</a>
     </div>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Open menu" aria-controls="mnav" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-<nav class="mobile" id="mnav">
-  <a href="#services">Services</a><a href="#about">About</a><a href="#crew">Team</a>
+<nav class="mobile" id="mnav" aria-label="Mobile navigation" inert>
+  <a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a>
   <a href="#reviews">Reviews</a><a href="#contact">Contact</a>
   <a href="tel:+6433899476" class="btn btn-primary">Call 03 389 9476</a>
 </nav>
 
+<main id="main">
 <!-- HERO -->
 <section class="hero">
-  <div class="slides" id="slides">
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1900&q=80')"></div>
-    <div class="slide" data-bg="https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&w=1900&q=80"></div>
-    <div class="slide" data-bg="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1900&q=80"></div>
-  </div>
-  <div class="scrim"></div>
+  <div class="slides" id="slides" aria-hidden="true">
+    <img class="slide active" src="images/hero-workshop.jpg" alt="" fetchpriority="high" width="1400" height="933">
+    <img class="slide" src="images/workshop-2.jpg" alt="" loading="lazy" width="1400" height="788">
+    <img class="slide" src="images/unique-workshop.jpg" alt="" loading="lazy" width="1400" height="786">
+  </div><div class="scrim"></div>
   <div class="wrap content">
-    <p class="eyebrow">Christchurch · Auto Repairs &amp; Servicing</p>
-    <h1>Honest car repairs <span>that get you back on the road.</span></h1>
+    <p class="eyebrow">Unique Auto Repairs Ltd · Christchurch</p>
+    <h1>Honest repairs.<br><span>Back on the road.</span></h1>
     <p class="lead">Servicing, WOFs and mechanical repairs for all makes and models — done properly, with a clear quote before any work starts.</p>
     <div class="actions">
       <a href="#contact" class="btn btn-primary">Book a Service</a>
@@ -240,7 +229,10 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
         03 389 9476
       </a>
     </div>
+    <a class="hero-rating" href="https://www.google.com/maps/search/?api=1&amp;query=Unique+Auto+Repairs+Ltd&amp;query_place_id=ChIJK_NeH42JMW0Retf9YbVFPMI" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><span><strong>4.7 / 5</strong> from 91 Google reviews</span><span aria-hidden="true">↗</span></a>
+    <a class="hero-review" href="https://search.google.com/local/writereview?placeid=ChIJK_NeH42JMW0Retf9YbVFPMI" target="_blank" rel="noopener">Leave a Review <span aria-hidden="true">↗</span></a>
   </div>
+  <button class="slide-toggle" type="button" aria-label="Pause background slideshow">Pause slideshow</button>
   <span class="scroll-tag">Scroll</span>
 </section>
 
@@ -272,32 +264,32 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
     </div>
     <div class="svc-grid">
       <div class="svc reveal">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <img class="service-photo" src="images/unique-workshop.jpg" alt="Unique Auto Repairs workshop on Dearsley Street" loading="lazy" width="700" height="438">
         <h3>WOF Inspections</h3>
         <p>Warrant of Fitness checks while you wait, with a plain-English rundown of anything that needs sorting.</p>
       </div>
       <div class="svc reveal">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <img class="service-photo" src="images/hero-workshop.jpg" alt="Fresh engine oil being added during a service" loading="lazy" width="700" height="438">
         <h3>Servicing &amp; Logbook</h3>
         <p>Scheduled and logbook servicing that keeps your warranty intact and your car running its best.</p>
       </div>
       <div class="svc reveal">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="3"/></svg>
+        <img class="service-photo" src="images/workshop-3.jpg" alt="Mechanic using a spanner on vehicle components" loading="lazy" width="700" height="438">
         <h3>Brakes &amp; Suspension</h3>
         <p>Pads, discs, shocks and struts — the bits that keep you stopping straight and riding smooth.</p>
       </div>
       <div class="svc reveal">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <img class="service-photo" src="images/workshop-2.jpg" alt="Mechanic inspecting a vehicle engine" loading="lazy" width="700" height="438">
         <h3>Engine Diagnostics</h3>
         <p>Check-engine light on? We plug in, read the fault codes and tell you what's really going on.</p>
       </div>
       <div class="svc reveal">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <img class="service-photo" src="images/workshop-3.jpg" alt="Hands carrying out mechanical repair work" loading="lazy" width="700" height="438">
         <h3>Clutch &amp; Transmission</h3>
         <p>Slipping clutch or rough gear changes? We diagnose and repair manual and auto drivelines.</p>
       </div>
       <div class="svc reveal">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h4l2-7 4 14 2-7h4"/></svg>
+        <img class="service-photo" src="images/unique-workshop.jpg" alt="Vehicles outside Unique Auto Repairs in Linwood" loading="lazy" width="700" height="438">
         <h3>Tyres, Batteries &amp; A/C</h3>
         <p>New tyres, flat batteries and air-con regas to keep you comfortable through the Canterbury seasons.</p>
       </div>
@@ -310,8 +302,8 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
   <div class="wrap">
     <div class="about">
       <div class="media reveal">
-        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1100&q=80" alt="Mechanic working under the bonnet of a car in the workshop" loading="lazy" width="1100" height="825">
-        <span class="tag">In the workshop</span>
+        <img src="images/unique-workshop.jpg" alt="Unique Auto Repairs workshop at A/9 Dearsley Street, Linwood" loading="lazy" width="1100" height="825">
+        <span class="tag">Your local workshop</span>
       </div>
       <div class="reveal">
         <span class="eyebrow">About Us</span>
@@ -328,74 +320,21 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
   </div>
 </section>
 
-<!-- CREW -->
-<section class="band light" id="crew">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:34px">
-      <span class="badge">The Team</span>
-      <h2>The people under the bonnet</h2>
-      <p>A small, hands-on crew — you'll deal with the same faces every visit. Support roles shown are examples of how the workshop runs.</p>
-    </div>
-    <div class="crew-grid">
-      <div class="crew reveal">
-        <div class="av">V</div>
-        <h3>Vim</h3>
-        <div class="role-sub">Owner / Lead Mechanic</div>
-        <p>Runs the workshop and the spanner. The one who'll talk you through your car and stand behind the work.</p>
-      </div>
-      <div class="crew reveal">
-        <div class="av">QT</div>
-        <h3>Qualified Technician</h3>
-        <div class="role-sub">Servicing &amp; Repairs</div>
-        <p>Handles the day-to-day servicing, WOFs and repairs so your car is turned around without the wait.</p>
-      </div>
-      <div class="crew reveal">
-        <div class="av">SA</div>
-        <h3>Service Advisor</h3>
-        <div class="role-sub">Bookings &amp; Quotes</div>
-        <p>Your first point of contact — books you in, keeps you updated and makes sure the quote is clear.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="band bone" id="reviews">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="badge">Example Reviews</span>
-      <h2>What Christchurch drivers say</h2>
-      <p>A taste of the kind of feedback a workshop like this earns. Sample reviews shown for the demo.</p>
-    </div>
-    <div class="rev-grid">
-      <div class="rev reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Took my Corolla in for a WOF and a noise I'd been ignoring. They found it, quoted before fixing, and the price was fair. Won't go anywhere else now."</p>
-        <div class="who"><span class="c">JM</span><div><b>Jared M.</b><span>Riccarton</span></div></div>
-      </div>
-      <div class="rev reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Honest blokes. My old Hilux needed a clutch and they talked me through every option instead of just charging me for the biggest job. Sorted same week."</p>
-        <div class="who"><span class="c">TW</span><div><b>Tania W.</b><span>Hornby</span></div></div>
-      </div>
-      <div class="rev reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Check-engine light had me worried. They plugged in, explained it in plain English and it turned out to be a cheap fix. Genuinely good service."</p>
-        <div class="who"><span class="c">RP</span><div><b>Reuben P.</b><span>Papanui</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FUNNEL BANNER -->
+<section class="band light" id="gallery"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow">Under the bonnet</span><h2>A closer look at car care</h2><p>Our Linwood workshop, alongside a look at the kind of hands-on maintenance that keeps your car moving.</p></div><div class="gallery-grid">
+<figure class="reveal"><img src="images/unique-workshop.jpg" alt="Unique Auto Repairs exterior with cars outside the workshop" loading="lazy" width="1400" height="786"><figcaption>Our workshop · A/9 Dearsley Street</figcaption></figure>
+<figure class="reveal"><img src="images/hero-workshop.jpg" alt="Engine oil being topped up" loading="lazy" width="1400" height="933"><figcaption>Routine servicing · illustrative photo</figcaption></figure>
+<figure class="reveal"><img src="images/workshop-3.jpg" alt="Mechanic working with a spanner" loading="lazy" width="1400" height="933"><figcaption>Mechanical care · illustrative photo</figcaption></figure>
+</div></div></section>
+<section class="band bone" id="reviews"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow">Google reviews · 4.7 / 5</span><h2>Good words from local drivers</h2><p>Short excerpts from real customer reviews. 91 Google reviews, checked 13 September 2026; relative dates as shown by Google.</p></div><div class="rev-grid"><article class="rev reveal"><span class="star-row" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg></span><p>“Very experienced and helpful.”</p><div class="who"><span class="c">KN</span><div><b>kartik negi</b><span>2 months ago · Google</span></div></div></article><article class="rev reveal"><span class="star-row" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg></span><p>“nice people really friendly would go back again”</p><div class="who"><span class="c">LD</span><div><b>Lorraine dennison</b><span>7 months ago · Google</span></div></div></article><article class="rev reveal"><span class="star-row" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg></span><p>“Cool, down earth, and easy going guys.”</p><div class="who"><span class="c">JM</span><div><b>J D Mullin</b><span>6 years ago · Google</span></div></div></article></div><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Unique+Auto+Repairs+Ltd&amp;query_place_id=ChIJK_NeH42JMW0Retf9YbVFPMI" target="_blank" rel="noopener">See all our Google reviews ↗</a></div></section>
+<!-- REVIEW INVITATION -->
 <section class="funnel">
   <div class="wrap inner">
     <div>
-      <div class="stars">★★★★★</div>
-      <h2>Happy with our work? Leave us a review.</h2>
+      <span class="star-row" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1z"/></svg></span>
+      <h2>Been to the workshop? Share your experience.</h2>
       <p>It takes 30 seconds and helps other Christchurch drivers find an honest workshop.</p>
     </div>
-    <a href="review.html" class="btn btn-primary">Leave a Review</a>
+    <a href="https://search.google.com/local/writereview?placeid=ChIJK_NeH42JMW0Retf9YbVFPMI" target="_blank" rel="noopener" class="btn btn-primary">Leave a Review</a>
   </div>
 </section>
 
@@ -418,60 +357,31 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
           </a>
           <div>
             <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <span><b>Location</b>Christchurch, Canterbury</span>
+            <span><b>Location</b>A/9 Dearsley Street<br>Linwood, Christchurch 8011</span>
           </div>
         </div>
       </div>
-      <div class="form reveal">
-        <h3>Request a Quote</h3>
-        <p class="sub">Tell us about your car and what it needs — we'll get back to you fast.</p>
-        <form action="https://formsubmit.co/uniqueauto7@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New quote request — Unique Auto Repairs website">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://unique-auto-repairs-ltd-demo.vercel.app/index.html">
-          <div class="row2">
-            <div class="field"><label>Name</label><input type="text" name="Name" placeholder="Your name" required></div>
-            <div class="field"><label>Phone</label><input type="tel" name="Phone" placeholder="Your number" required></div>
-          </div>
-          <div class="row2">
-            <div class="field"><label>Email</label><input type="email" name="Email" placeholder="you@email.com"></div>
-            <div class="field"><label>Vehicle Make / Model</label><input type="text" name="Vehicle" placeholder="e.g. 2014 Toyota Corolla"></div>
-          </div>
-          <div class="field">
-            <label>What do you need?</label>
-            <select name="Service">
-              <option>WOF inspection</option>
-              <option>Service / logbook</option>
-              <option>Brakes or suspension</option>
-              <option>Engine diagnostics</option>
-              <option>Clutch / transmission</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="field"><label>Tell us about the job</label><textarea name="Details" placeholder="Any noises, warning lights, or what you'd like done..."></textarea></div>
-          <button type="submit" class="btn btn-primary">Send Request</button>
-        </form>
-      </div>
+      <div class="contact-actions reveal"><span class="eyebrow">Let’s talk about your car</span><h3>A quick call gets things started.</h3><p>Have your vehicle make, model and a description of the job handy. We’ll help you arrange the next step.</p><a class="btn btn-primary" href="tel:+6433899476">Call Unique Auto Repairs</a><a class="btn btn-ghost" href="mailto:uniqueauto7@gmail.com">Email Unique Auto Repairs</a><a class="social-link" href="https://www.facebook.com/search/top?q=Unique%20Auto%20Repairs%20Christchurch" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.88v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg> Find on Facebook <span class="social-note">(search)</span></a></div>
     </div>
   </div>
 </section>
 
+<section class="map-section"><div class="wrap"><div class="map-heading"><div><span class="eyebrow">Find the workshop</span><h2>See you in Linwood.</h2></div><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Unique+Auto+Repairs+Ltd&amp;query_place_id=ChIJK_NeH42JMW0Retf9YbVFPMI" target="_blank" rel="noopener">Get directions ↗</a></div><iframe title="Google Map: Unique Auto Repairs, A/9 Dearsley Street, Linwood" src="https://www.google.com/maps?q=Unique+Auto+Repairs+Ltd,A%2F9+Dearsley+Street,Christchurch&amp;output=embed" width="1180" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></section></main>
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <a href="index.html" class="brand"><span class="dot">U</span> Unique Auto Repairs</a>
-        <p>Honest car servicing, WOFs and mechanical repairs for all makes and models in Christchurch.</p>
+        <p>Honest car servicing, WOFs and mechanical repairs for all makes and models in Christchurch.</p><a class="social-link" href="https://www.facebook.com/search/top?q=Unique%20Auto%20Repairs%20Christchurch" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.88v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg> Find on Facebook <span class="social-note">(search)</span></a>
       </div>
       <div class="foot-col">
         <h5>Explore</h5>
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#crew">Team</a>
+        <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
-        <a href="review.html">Leave a Review</a>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJK_NeH42JMW0Retf9YbVFPMI" target="_blank" rel="noopener">Leave a Review</a>
       </div>
       <div class="foot-col">
         <h5>Contact</h5>
@@ -489,19 +399,24 @@ footer{background:#0d0e10;color:#fff;padding:64px 0 30px}
 
 <script>
 // intro
-window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('intro').classList.add('done'),1100)});
+setTimeout(()=>document.getElementById('intro').classList.add('done'),650);
 // nav scroll
 const hdr=document.getElementById('hdr');
 addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',scrollY>40)});
 // mobile menu
 const burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
-burger.addEventListener('click',()=>mnav.classList.toggle('open'));
-mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mnav.classList.remove('open')));
-// hero rotation
+function menu(open){mnav.classList.toggle('open',open);mnav.inert=!open;burger.setAttribute('aria-expanded',String(open));burger.setAttribute('aria-label',open?'Close menu':'Open menu');}
+burger.addEventListener('click',()=>menu(!mnav.classList.contains('open')));
+mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape'){menu(false);burger.focus();}});
+matchMedia('(max-width:880px)').addEventListener('change',()=>menu(false));
 const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 const slides=[...document.querySelectorAll('.hero .slide')];
-slides.forEach(s=>{if(s.dataset.bg){const i=new Image();i.src=s.dataset.bg;i.onload=()=>s.style.backgroundImage=`url('${s.dataset.bg}')`;}});
-if(!reduce&&slides.length>1){let i=0;setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active');},6000);}
+let current=0,paused=reduce;
+const toggle=document.querySelector('.slide-toggle');
+function label(){toggle.textContent=paused?'Play slideshow':'Pause slideshow';toggle.setAttribute('aria-label',paused?'Play background slideshow':'Pause background slideshow');}
+label();toggle.addEventListener('click',()=>{paused=!paused;label();});
+setInterval(()=>{if(paused||document.hidden)return;const next=(current+1)%slides.length;if(!slides[next].complete||!slides[next].naturalWidth)return;slides[current].classList.remove('active');current=next;slides[current].classList.add('active');},5000);
 // reveal
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.14});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));

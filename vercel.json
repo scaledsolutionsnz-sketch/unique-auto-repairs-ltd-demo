@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/review.html",
+      "destination": "https://search.google.com/local/writereview?placeid=ChIJK_NeH42JMW0Retf9YbVFPMI",
+      "permanent": true
+    },
+    {
+      "source": "/private.html",
+      "destination": "/#contact",
+      "permanent": true
+    }
+  ]
+}
