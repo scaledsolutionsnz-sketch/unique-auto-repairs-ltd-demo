@@ -4,3 +4,5 @@ Workshop exterior from the same Google listing. Other images: Unsplash photo-148
 No matching Facebook or Instagram profiles found by exact business-name + Christchurch searches. Facebook search fallback explicitly labelled. Existing email retained.
 
 2026-09-15: Added both user-supplied workshop photos and Unique Auto logo from iCloud Desktop/Demos/Unique Auto Repairs Ltd. Replaced displayed stock images with supplied photos. Theme follows the supplied lime-green logo. Original Google workshop photo retained as the third hero/gallery image.
+
+2026-09-15: Replaced the site logo with user-selected Desktop/ChatGPT Image Sep 15, 2026, 04_28_38 PM.png. Lossless WebP preserves transparency and proportions.
